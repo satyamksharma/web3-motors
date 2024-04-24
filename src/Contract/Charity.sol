@@ -47,17 +47,18 @@ contract Contract {
         return address(this).balance;
     }
     
-    function createRequests(string memory _description, address payable _recipient, uint _target) public {
+    function createRequests(string memory _description, uint _target) public {
         require(msg.sender == manager, "Only manager can call this function");
         Request storage newRequest = requests[numRequests];
         newRequest.uniqueid = numRequests;
         newRequest.description = _description;
-        newRequest.recipient = payable(_recipient);
+        newRequest.recipient = payable(0x083F4820DE09e89d3b88329395829B809713545E); // Your address set as recipient
         newRequest.target = _target;
-        newRequest.completed = true;
+        newRequest.completed = false; // This should likely be false initially
         newRequest.noOfVoters = 0;
         numRequests++;
     }
+    
     
         require(contributors[msg.sender] > 0, "You must be a contributor");
         Request storage thisRequest = requests[_requestNo];
@@ -80,4 +81,5 @@ contract Contract {
         thisRequest.recipient.transfer(thisRequest.target);
         
     }
-}
+
+    }

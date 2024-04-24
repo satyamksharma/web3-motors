@@ -240,12 +240,8 @@
     },
     "sources": {
         "CharityDAO.sol": {
-            "keccak256": "0x63b302662c3c631fb708764b129b2f28c96f3d72fc1fcea0d0c8e8ff26c14a98",
-            "license": "UNLICENSED",
-            "urls": [
-                "bzz-raw://17550169bebbfc4d95eb14d77dfa979c43c076f5bce61256963dc8aadf1a5b65",
-                "dweb:/ipfs/QmZBUZ8A2fqX2MLTY1X7UPJR5X348oGTTjnJpv9sbFaRFw"
-            ]
+            "keccak256": "0x083F4820DE09e89d3b88329395829B809713545E",
+            "license": "UNLICENSED"
         }
     },
     "version": 1
