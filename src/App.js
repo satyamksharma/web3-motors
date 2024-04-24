@@ -49,6 +49,7 @@ function App() {
                                 <img
                                     className='h-10'
                                     src='metamask.png'
+                                    alt='metamask'
                                 />
                             </div>
                         </a>

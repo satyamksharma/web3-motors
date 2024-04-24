@@ -17,7 +17,7 @@ const Manager = () => {
             }
         };
         getBal();
-    }, []);
+    }, [App.Charitycontract]);
     const Create = async () => {
         try {
             const tx = await App.Charitycontract.createRequests(
@@ -26,7 +26,7 @@ const Manager = () => {
                 ethers.utils.parseEther(target)
             );
             await tx.wait();
-            alert("Created Sucessfull!");
+            alert("Created Successfully!");
             setAddress("");
             settarget("");
             setDescription("");
@@ -34,9 +34,9 @@ const Manager = () => {
             if (error.message === "MetaMask Tx Signature: User denied transaction signature.") {
                 alert(" User denied transaction signature.");
             } else if (
-                error.message === "execution reverted: Only manager can calll this function"
+                error.message === "execution reverted: Only manager can call this function"
             ) {
-                alert(" Only manager can calll this function");
+                alert(" Only manager can call this function");
             } else {
                 console.log(error.message);
                 alert("Something went wrong");
@@ -84,7 +84,7 @@ const Manager = () => {
                                         htmlFor='email'
                                         className='leading-7 text-sm text-gray-600'
                                     >
-                                        Taget in ETH
+                                        Target in ETH
                                     </label>
                                     <input
                                         value={target}

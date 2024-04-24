@@ -9,7 +9,7 @@ const Request = () => {
             console.log(nums);
             const tx = await App.Charitycontract.voteRequest(nums);
             await tx.wait();
-            alert("Voted Sucessfull!");
+            alert("Voted Successful!");
             setnum(num + 1);
         } catch (error) {
             if (error.message === "YOu must be contributor") {
@@ -25,10 +25,10 @@ const Request = () => {
             console.log(id);
             const tx = await App.Charitycontract.makePayment(id);
             await tx.wait();
-            alert("Donated Sucessfull!");
+            alert("Donated Successful!");
             setnum(num + 1);
         } catch (error) {
-            if (error.message == "execution reverted: You already Voted") {
+            if (error.message === "execution reverted: You already Voted") {
                 alert("All ready voted");
             } else {
                 console.log(error.message);
