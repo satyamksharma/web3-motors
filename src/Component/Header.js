@@ -63,9 +63,9 @@ const Header = () => {
                     href='/'
                     className='flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0'
                 >
-                    <span className='ml-3 font-mono font-bold text-3xl'>Charity</span>
+                    <span className='ml-3 font-mono font-bold text-3xl'>Web3 Wishes</span>
                 </a>
-                <div className='md:ml-auto flex flex-wrap items-center cursor-pointer text-base justify-center'>
+                <div className='md:ml-auto flex flex-wrap items-center cursor-pointer text-base font-semibold justify-center'>
                     <m
                         onClick={() => setRoute("Contributors")}
                         className='mr-5 mt-1 hover:text-gray-900'
